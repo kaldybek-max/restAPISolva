@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-rate-table
+      author: Kaldybek
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  constraints:
+                  primaryKey: true
+                  nullable: false
+              - column:
+                  name: date_time
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: close_rate
+                  type: varchar(45)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: cur_date
+                  type: date
+                  constraints:
+                    nullable: false

@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-transaction
+      author: Kaldybek
+      changes:
+        - createTable:
+            tableName: transaction
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: account_from
+                  type: varchar(10)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: account_to
+                  type: varchar(10)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: val_code
+                  type: varchar(3)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: sum
+                  type: float(30,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: expense_category
+                  type: varchar(7)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: datetime
+                  type: datetime
+                  constraints:
+                    nullable: false

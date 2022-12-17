@@ -9,38 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9dc5cc8-50e6-46f9-b912-08341fd6d625" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/configuration/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/configuration/WebInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/controller/LimitController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/controller/TransactionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/dao/ProductLimitDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/dao/ProductLimitDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/dao/RateDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/dao/RateDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/dao/ServiceLimitDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/dao/ServiceLimitDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/dao/TransactionsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/dao/TransactionsDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/entity/ProductLimit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/entity/Rate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/entity/ServiceLimit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/entity/Transactions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/service/ProductLimitService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/service/ProductLimitServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/service/RateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/service/RateServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/service/ServiceLimitService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/service/ServiceLimitServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/service/TransactionsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/java/kz/solva/transactions/service/TransactionsServiceImpl.java" afterDir="false" />
+    <list default="true" id="f9dc5cc8-50e6-46f9-b912-08341fd6d625" name="Changes" comment="final objects">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/changeset/create-product-limits-table.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/changeset/create-transaction-table.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,8 +169,16 @@
       <workItem from="1670983268186" duration="11858000" />
       <workItem from="1671075036571" duration="12522000" />
       <workItem from="1671208042574" duration="1258000" />
-      <workItem from="1671255127519" duration="12645000" />
+      <workItem from="1671255127519" duration="16000000" />
     </task>
+    <task id="LOCAL-00001" summary="final objects">
+      <created>1671270917197</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671270917197</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,5 +194,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="final objects" />
+    <option name="LAST_COMMIT_MESSAGE" value="final objects" />
   </component>
 </project>

@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-service-limits-table
+      author: Kaldybek
+      changes:
+        - createTable:
+            tableName: product_limits
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                  primaryKey: true
+                  nullable: false
+              - column:
+                  name: acc_code
+                  type: varchar(10)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: limit_sum
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: limit_datetime
+                  type: datetime
+                  constraints:
+                    nullable: false
+              - column:
+                  name: val_code
+                  type: varchar(3)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: exc_fl
+                  type: char(1)
+                  constraints:
+                    nullable: false
