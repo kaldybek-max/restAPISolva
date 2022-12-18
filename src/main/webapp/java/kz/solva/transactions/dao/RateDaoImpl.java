@@ -24,7 +24,8 @@ public class RateDaoImpl implements RateDao {
     public Rate getRate(LocalDate localDate) {
         Session session = sessionFactory.getCurrentSession();
 
-        if(!localDate.getDayOfWeek().toString().equals("SATURDAY")) {
+        if(!localDate.getDayOfWeek().toString().equals("SATURDAY") ||
+          !localDate.getDayOfWeek().toString().equals("SUNDAY")) {
             Query<Rate> rateQuery = session.createQuery("from Rate " +
                     "where curDate =: localDate");
             rateQuery.setParameter("localDate", localDate);
