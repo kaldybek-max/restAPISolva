@@ -1,0 +1,239 @@
+openapi: 3.0.0
+info: 
+  title: Микросервис OpenAPI спецификация
+  version: 0.0.1
+servers:
+  - url: http://localhost:8080/solva/api/
+    description: Dev server
+paths:
+  /transaction:
+    post:
+      summary: Метод для внесения транзакции
+      tags:
+        - Transactions
+      operationId: postTransaction
+      parameters:
+        - name: accountFrom
+          in: query
+          required: true
+          description: Номер счета отправителя
+          schema:
+            type: string
+        - name: accountTo
+          in: query
+          required: true
+          description: Номер счета получателя
+          schema:
+            type: string
+        - name: valCode
+          in: query
+          required: true
+          description: Валюта
+          schema:
+            type: string
+        - name: sum
+          in: query
+          required: true
+          description: Сумма
+          schema:
+            type: integer
+        - name: expenceCategory
+          in: query
+          required: true
+          description: Категория
+          schema:
+            type: string
+        - name: dateTime
+          in: query
+          required: true
+          description: Дата и время
+          schema:
+            type: string
+      responses:
+        '200':
+          description: success
+          content: 
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Transactions"
+  
+  /get_limit_sum/for_product:
+    get:
+      summary: Метод получения лимита по категорий продукт
+      tags:
+        - ProductLimit
+      operationId: getProductLimit
+      parameters:
+        - name: accCode
+          in: query
+          required: true
+          description: Номер счета
+          schema:
+            type: string  
+      responses:
+        '200':
+          description: success
+          content: 
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProductLimits"
+    
+  /get_limit_sum/for_service:
+    get:
+      summary: Метод получения лимита по категорий сервис
+      tags:
+        - ServiceLimit
+      operationId: getServiceLimit
+      parameters:
+        - name: accCode
+          in: query
+          required: true
+          description: Номер счета
+          schema:
+            type: string  
+      responses:
+        '200':
+          description: success
+          content: 
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProductLimits"
+  
+  /get_limit_sum/service/new_lim:
+    put:
+      summary: Метод изменения лимита для категории сервис
+      tags:
+        - UpdateLimit
+      operationId: updateServiceLimit
+      parameters:
+        - name: accCode
+          in: query
+          required: true
+          description: Номер счета
+          schema:
+            type: string  
+        - name: limitSum
+          in: query
+          required: true
+          description: Сумма лимита
+          schema:
+            type: number
+      responses:
+        '200':
+          description: success
+          
+  /get_limit_sum/product/new_lim:
+    put:
+      summary: Метод изменения лимита для категории продукт
+      tags:
+        - UpdateLimit
+      operationId: updateProductLimit
+      parameters:
+        - name: accCode
+          in: query
+          required: true
+          description: Номер счета
+          schema:
+            type: string  
+        - name: limitSum
+          in: query
+          required: true
+          description: Сумма лимита
+          schema:
+            type: number
+      responses:
+        '200':
+          description: success
+          
+      
+            
+components:
+  schemas:
+    Transaction:
+      type: object
+      required:
+        - id
+        - accountFrom
+        - accountTo
+        - valCode
+        - sum
+        - expenceCategory
+        - dateTime
+      properties:
+        id:
+          type: integer
+          example: 1
+        accountFrom:
+          type: string
+          example: 1234567899
+        accountTo:
+          type: string
+          example: 1234567899
+        valCode:
+          type: string
+          example: KZT
+        sum:
+          type: number
+          example: 123.02
+        expenceCategory:
+          type: string
+          example: product
+        dateTime:
+          type: string
+          example: 2022-12-15 10:11:00
+    Transactions:
+      type: object
+      items:
+      $ref: "#/components/schemas/Transaction"
+    ProductLimit:
+      type: object
+      required:
+        - accCode
+      properties:
+        id:
+          type: integer
+          example: 1
+        accCode:
+          type: string
+          example: 1234567899
+        limitSum:
+          type: number
+          example: 1000.00
+        limitDateTime:
+          type: string
+          example: 2022-12-15
+        valCode:
+          type: string
+          example: USD
+        excFl:
+          type: string
+          example: 0
+    ProductLimits:
+      type: object
+      items:
+      $ref: "#/components/schemas/ProductLimit"
+    
+        
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
