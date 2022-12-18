@@ -2,4 +2,4 @@
 
 1) Запуск. Для запуска проекта нужен программа конфигурации, например Tomcat(https://tomcat.apache.org/download-90.cgi)
 2) БД - MySQL. Использована для миграции Liquibase
-3) Документация OpenAPI в файле - 
+3) Документация OpenAPI в файле - RestOpenAPI.yaml
